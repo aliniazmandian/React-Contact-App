@@ -1,0 +1,29 @@
+
+
+
+
+
+
+
+
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 80vh;
+    
+   
+}
+.mainContainer{
+    /* background-color: #ccc; */
+    width: 98%;
+    height: 98%;
+    margin:.2rem 0;
+   
+}
+
+
+
+
+

@@ -1,0 +1,404 @@
+.container{
+    /* background-color: aqua; */
+    position: relative;
+    /* overflow: hidden; */
+    transition: all .5s ease-in-out;
+}
+
+
+
+.toast{
+    position: absolute;
+    z-index: 4;
+    top: 10px;
+    right: 10px;
+    background-color: rgba(127, 255, 212, 0.497);
+    border-radius: 12px;
+    padding: 20px 25px 20px 20px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+    border-left: 6px solid rgb(127, 255, 212);
+    border-top: 1px solid rgb(127, 255, 212);
+    border-bottom: 1px solid rgb(127, 255, 212);
+    border-right: 1px solid rgb(127, 255, 212);
+    box-shadow: inset 10px 0 10px #00000099 ;
+    overflow: hidden;
+    transform: translateX(calc(100% + 26px));
+    transition: all .4s cubic-bezier(0.68,-0.55,0.265,1.90);
+}
+
+.toast.active{
+    transform: translateX(0%);
+}
+
+.toastContent{
+    display: flex;
+    align-items: center;
+}
+
+.toastContent i{
+    font-size: 2rem;
+    border-radius: 50%;
+    color: rgb(127, 255, 212);
+}
+
+.text1{
+    color: rgb(127, 255, 212);
+    font-size: 1.5rem;
+}
+
+.text2{
+    color: rgb(0, 0, 0);
+    font-size: 1.3rem;
+    /* letter-spacing: .1rem; */
+}
+
+
+.toastContent .message{
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+}
+
+
+.toast .progress{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    /* background-color: #ee7676; */
+}
+
+
+
+.toast .progress::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 100%;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(127, 255, 212);
+    
+}
+
+
+.progress.active::before{
+    animation: progress 3s linear forwards;
+}
+
+@keyframes progress {
+    0%{
+        right: 0%;
+    }
+    100% {
+        right: 100%;
+    }
+}
+
+
+
+
+.popUpBack{
+    background-color: black;
+    opacity: .5;
+    display: none;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: 2;
+}
+
+.popUp{
+    position: absolute;
+    width: 90vw;
+    height: 50vh;
+    background:var(--theme-page-container);
+    
+    opacity: 0;
+    border: 1px solid var(--backGround-main-color);
+    border-radius: 40px;
+    overflow: hidden;
+    transform: translateY(-60vh);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .4s ease-in-out;
+    z-index: 2;
+}
+
+@media screen and (min-width:700px) {
+    .popUp{
+        width: 50vw;
+        height: 30vh;
+    }
+}
+
+.popUpContainer{
+    width: 100%;
+    height: 100%;
+    /* background-color: aquamarine; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    
+}
+
+.popUpTitle{
+    margin-top: 6rem;
+}
+
+.pupUpBtn{
+    cursor: pointer;
+    padding: 1rem;
+    width: 10rem;
+    border: 1px solid var(--backGround-main-color);
+    outline: none;
+    background: transparent;
+    border-radius: 10px;
+    font-family: "roboto";
+    font-weight: 600;
+    /* color: var(--backGround-main-color) ; */
+    margin: 1rem;
+    margin-top: 4rem;
+}
+
+
+
+.motion{
+   position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background: transparent;
+    
+    
+    /* background-color: aqua; */
+}
+
+
+
+.loading{
+    /* background-color: aqua; */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    animation: loadingAnimate 1.5s linear infinite ;
+}
+
+@keyframes loadingAnimate {
+    0%,100%{opacity: 1;}
+    50%{opacity: 0;}
+    
+}
+
+
+.contactContainer{
+    display: flex;
+    background: var(--theme-page-container);
+    backdrop-filter:blur( var(--theme-glass-blur) );
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.contactData{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+ 
+.header{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.image{
+    margin-top: 1rem;
+    border-radius: 50%;
+    box-shadow: 0 0 5px ;
+    width: 8rem;
+}
+
+@media screen and (min-width:700px) {
+    .image{
+        width:10rem;
+        
+    }
+}
+
+.nameContainer{
+    position: absolute;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center ;
+    align-items:center;
+}
+
+.inputName{
+    border: 1px solid transparent;
+    outline: none;
+    text-align: center;
+    background: transparent;
+    margin-top: .5rem;
+    font-size: 3rem;
+    border-radius: 10px;
+    font-family: "Roboto"; 
+    animation-name: animateBorder ;
+    animation-duration : 2s;
+     animation-timing-function: linear;
+    animation-iteration-count : infinite;
+
+}
+
+@keyframes animateBorder {
+    50%{border-color: transparent;}
+}
+
+
+
+.iconContainer{
+    position: relative;
+   z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: aqua; */
+    }
+
+    .backLink{
+        z-index: 2;
+    }
+    
+    .editLink{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .btn{
+        cursor: pointer;
+       background: transparent;
+        border: none;
+        width: 40px;
+        height: 40px;
+        color: var(--backGround-main-color);
+        padding:0rem;
+        margin: .5rem;
+        text-shadow: 0 0 4px rgb(0, 0, 0);
+        font-size: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all .3s ease-in-out;
+        /* background-color: var(--theme-glass); */
+    }
+
+    .btn:hover{
+        text-shadow: 0 0 10px rgb(0, 0, 0);
+        transform: scale(1.1);
+    }
+
+    .editBtnContainer{
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        border: 1px solid var(--backGround-main-color);
+        border-radius: 10px;
+        top: 10px;
+        left: 85px;
+        opacity: 1;        
+        transition: all .3s ease-in-out;
+    }
+
+    .editTitle{
+margin-top: .5rem;
+        color: var(--backGround-main-color);
+        font-size: 1.5rem;
+        font-weight: 600;
+        text-shadow: 0 0 3px rgb(0, 0, 0);
+
+    }
+
+.delet{
+      color: #ee7676;
+
+    }
+
+.cancel{
+    color: #ee7676;
+    margin: 0;
+    }
+.save{
+    color: rgb(127, 255, 212);
+    margin: 0;
+}
+
+
+
+.contactTextContainer{
+    /* background-color: #ee7676; */
+    height: 30vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.inputContainer{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.input{
+    flex-grow: 1;
+    border: 3px solid transparent;
+    outline: none;
+    margin: .5rem .5rem;
+    font-family: "roboto";
+    border-radius: 10px;
+    padding: .5rem;
+    font-size: 2rem;
+    animation-name: animateBorder;
+    background: transparent;
+    animation-duration : 2s;
+    animation-timing-function: linear;
+   animation-iteration-count : infinite;
+    
+}
+
+.lable{
+    font-size: 2rem;
+   padding: .2rem 0 .5rem .5rem;
+   /* background-color: #ee7676; */
+    
+}
+
+.line{
+    width: 100%;
+    height: 1px;
+    background:linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.8233618233618234) 25%, rgba(0,0,0,1) 50%, rgba(0,0,0,0.8319088319088319) 75%, rgba(0,0,0,0) 100%) ;
+}
+
+.contactEmail{
+    font-size: 2rem;
+    padding-top: 1rem;
+    padding-left: 1rem;
+}
+

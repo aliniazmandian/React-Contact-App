@@ -1,0 +1,55 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css");
+
+
+html{
+    font-size: 62.5%;
+    overflow: hidden;
+    font-family:'Roboto';
+}
+
+*,::after,::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+
+:root{
+    /* backGround Animation Variables */
+    --backGround-main-color:  #8eb9c5;
+    --backGround-lines-color:#7b7777;
+    --backGround-line-size:2px;
+    --backGround-line-fade:0px;
+
+    /* Theme Color */
+    --theme-backGround-color:#b9bfc7;
+    --theme-border-color:rgba(253, 253, 253, 0);
+    --theme-glass:#3A3845;
+    --theme-glass-2: rgba(117, 117, 117, 0.689);
+    --theme-box-shadow:rgba(0, 0, 0, 0);
+    --theme-page-container:-webkit-linear-gradient(
+        90deg, rgba(201, 13, 13, 0) 10%,
+        #474d51 80%);
+    --theme-glass-blur:2px;
+    --theme-glass-blur-2:50px;
+    --font-color-1:black;
+    --font-color-2:black;
+    --font-color-3:black;
+    --icon-color:rgb(156, 156, 156);
+
+    /* Sidebar Menu */
+
+    --side-left:-64px;
+    --box-shadow:0px;
+    --border-style:0px;
+
+
+
+    
+
+}

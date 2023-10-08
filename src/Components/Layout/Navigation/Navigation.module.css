@@ -1,0 +1,130 @@
+
+
+.footer{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+}
+
+
+.nav{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 98%;
+  height: 11vh;
+  /* background-color:var(--theme-glass); */
+  /* border: 1px solid var(--theme-border-color); */
+  border-radius: 5px;
+  /* box-shadow: 0px 0px 20px  var(--theme-box-shadow); */
+  /* backdrop-filter: blur( var(--theme-glass-blur) ); */
+  font-size: 1.5rem;
+  font-weight: 600;
+  bottom: 0;
+  z-index: 1;
+}
+
+.navigation{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  height: 78px;
+  display: flex;
+  /* background-color: #222327; */
+  justify-content: center;
+  align-items: center;
+}
+
+.navigation ul{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.navigation ul li{
+  position: relative;
+  list-style: none;
+  width: 70px;
+  height: 70px;
+  z-index: 1;
+}
+
+
+.navigation ul li a
+{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+  color:var(--backGround-main-color);
+  text-shadow: 0px 0px 4px  #000000;
+}
+
+
+ .icon
+{
+  position: relative;
+  display: block;
+  line-height: 75px; 
+  font-size: 2.5rem;
+  text-align: center;
+  transition:  .3s;
+}
+
+.active .icon
+{
+  transform: translateY(-35px);
+  color:var(--backGround-main-color);
+  text-shadow: 0px 0px 4px  #000000;
+}
+
+.text
+{
+  position: absolute;
+  letter-spacing: .2rem;
+  transition:  1s;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.active .text
+{
+  opacity: 1;
+  transform: translateY(10px);
+  color:var(--theme-glass);
+  text-shadow: 0px 0px 0px  #787878;
+}
+
+.active{
+  position: relative;
+}
+
+.active::before{
+  content: "";
+  position: absolute;
+  background-color:var(--theme-glass);
+  backdrop-filter: blur( var(--theme-glass-blur) );
+  box-shadow: 0px 0px 20px  var(--theme-box-shadow);
+  top: -45%;
+  opacity: 1;
+  border-radius: 50%;
+  border: 1px solid var(--theme-border-color);
+  width: 70px;
+  height: 70px;
+  transition: all .3s ease-in-out;
+  animation: animate .6s ;
+}
+
+@keyframes animate {
+  0%{opacity: 0; top:0 }
+  100%{ opacity: 1; to:-45%}
+}
+
+
+
